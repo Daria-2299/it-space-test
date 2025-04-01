@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font-family: "Inter", sans-serif;
+$second-family: "Roboto", sans-serif;
+
+$text-color: #000000;
+$light-color: #ffffff;
+$subtitle-color: #929292;
+$border-color: #e2e2e2;
+$accent-first: #d72968;
+$accent-second: #015778;
+$accent-first-opacity: rgb(215, 41, 104, 0.5);
+$accent-second-opacity: rgb(1, 87, 120, 0.5);
+$bg-footer: #3b3b3b;
+$bg-burger-menu: #7b7575;
+$bg-dark: #1c1c1e;
+$error: #d72968;
+$gradient-bright: linear-gradient(
+  143deg,
+  $accent-first 0%,
+  $accent-second 100%
+);
+$gradient: linear-gradient(
+  143deg,
+  $accent-first-opacity 0%,
+  $accent-second-opacity 100%
+);
+
+$desktop: 1390px;
+$desktop-md: 1200px;
+$tablet-lg: 1090px;
+$tablet: 960px;
+$tablet-sm: 900px;
+$mobile: 767px;
+$mobile-sm: 480px;

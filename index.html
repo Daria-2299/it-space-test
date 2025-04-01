@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestIQ</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img
+          class="logo__image"
+          src="./src/images/logo.png"
+          alt="цветной логотип"
+        />
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="menu__item">Услуги</li>
+          <li class="menu__item"><a href="#about">О нас</a></li>
+          <li class="menu__item"><a href="#employee">Сотрудники</a></li>
+          <li class="menu__item"><a href="#welcome">Приветствие</a></li>
+          <li class="menu__item"><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__button">Оставить заявку</button>
+      <div class="burger-button">
+        <img src="./src/images/burger-menu.svg" alt="бургер-меню" />
+      </div>
+      <div class="mobile-menu">
+        <div class="burger-close">
+          <img src="./src/images/cross.svg" alt="крест" />
+        </div>
+        <div class="logo mobile-menu__logo">
+          <img class="logo__image" src="./src/images/logo.svg" alt="логотип" />
+        </div>
+        <nav>
+          <ul class="burger-menu">
+            <li class="burger-menu__item">Услуги</li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#about">О нас</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#employee">Сотрудники</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#welcome">Приветствие</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__social-icons">
+          <a class="mobile-menu__icon-container" href="#" target="_blank">
+            <img
+              class="mobile-menu__icon"
+              src="./src/images/instagram-icon.svg"
+              alt="иконка instagram"
+            />
+          </a>
+          <a class="mobile-menu__icon-container" href="#" target="_blank">
+            <img
+              class="mobile-menu__icon"
+              src="./src/images/telegram-icon.svg"
+              alt="иконка telegram"
+            />
+          </a>
+          <a class="mobile-menu__icon-container" href="#" target="_blank">
+            <img
+              class="mobile-menu__icon"
+              src="./src/images/whatsapp-icon.svg"
+              alt="иконка whats app"
+            />
+          </a>
+        </div>
+        <button class="mobile-menu__button">Оставить заявку</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="images">
+        <div class="images__item images__item--top-left">
+          <img
+            class="images__content"
+            src="./src/images/label-1.png"
+            alt="фотография лейбла"
+          />
+        </div>
+        <div class="images__item images__item--top-right">
+          <img
+            class="images__content"
+            src="./src/images/label-2.png"
+            alt="фотография лейбла"
+          />
+        </div>
+        <div class="images__item images__item--bottom-left">
+          <img
+            class="images__content"
+            src="./src/images/label-3.png"
+            alt="фотография лейбла"
+          />
+        </div>
+        <div class="images__item images__item--bottom-right">
+          <img
+            class="images__content"
+            src="./src/images/label-4.png"
+            alt="фотография лейбла"
+          />
+        </div>
+      </div>
+      <h1 class="slogan">играй в финансы - побеждай в жизни!</h1>
+      <article class="about" id="about">
+        <span class="about__subtitle">О нас</span>
+        <h2 class="about__title">
+          Не следует, однако забывать, что сложившаяся структура
+        </h2>
+        <p class="about__info">
+          Повседневная практика показывает, что постоянное
+          информационно-пропагандистское обеспечение нашей деятельности
+          представляет собой интересный эксперимент проверки соответствующий
+          условий активизации. Таким образом начало повседневной работы по
+          формированию позиции требуют определения и уточнения существенных
+          финансовых и административных условий.
+        </p>
+        <div class="achievement">
+          <div class="achievement__item">
+            <p class="achievement__title">>500</p>
+            <p class="achievement__subtitle">Проведенных игр</p>
+          </div>
+          <div class="achievement__item">
+            <p class="achievement__title">200+</p>
+            <p class="achievement__subtitle">Довольных посетителей</p>
+          </div>
+          <div class="achievement__item">
+            <p class="achievement__title">100%</p>
+            <p class="achievement__subtitle">Клиентов возвращаются</p>
+          </div>
+        </div>
+      </article>
+      <article class="team" id="employee">
+        <span class="team__subtitle">коллектив</span>
+        <h2 class="team__title">Наши сотрудники</h2>
+        <div class="team__container">
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image employee__image--small"
+                src="./src/images/employees/employee-1.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image"
+                src="./src/images/employees/employee-2.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image"
+                src="./src/images/employees/employee-3.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image"
+                src="./src/images/employees/employee-4.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image"
+                src="./src/images/employees/employee-5.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image"
+                src="./src/images/employees/employee-6.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+          <div class="employee">
+            <div class="employee__img-container">
+              <img
+                class="employee__image employee__image--big"
+                src="./src/images/employees/employee-7.png"
+                alt="фотография сотрудника"
+              />
+            </div>
+            <p class="employee__name">Имя Фамилия</p>
+            <p class="employee__info">
+              Равным образом консультация с широким активом позволяет.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="founder-block" id="welcome">
+        <span class="founder-block__subtitle">от первого лица</span>
+        <h2 class="founder-block__title">Приветствие от директора</h2>
+        <p class="founder-block__quote">
+          <img
+            class="founder-block__quote-icon"
+            src="./src/images/quote.svg"
+            alt="значок кавычек"
+          />
+          Значимость этих проблем настолько очевидна, что укрепление и развитие
+          структуры в значительной степени обуславливает создание дальнейших
+          направлений развития.
+        </p>
+        <div class="founder-block__content">
+          <div class="founder-block__info">
+            <p class="founder-block__text">
+              Повседневная практика показывает, что постоянное
+              информационно-пропагандистское обеспечение нашей деятельности
+              представляет собой интересный эксперимент проверки соответствующий
+              условий активизации. <br />
+              <br />Задача организации, в особенности же сложившаяся структура
+              организации способствует подготовки и реализации системы обучения
+              кадров.
+            </p>
+            <p class="founder-block__position">
+              Основатель компании, Имя Фамилия
+            </p>
+          </div>
+          <div class="founder-block__img-block">
+            <img
+              class="founder-block__image"
+              src="./src/images/founder.png"
+              alt="фотография основателя"
+            />
+          </div>
+        </div>
+      </article>
+      <article class="connection" id="contacts">
+        <span class="connection__subtitle">контакты</span>
+        <div class="connection__content">
+          <div class="contacts">
+            <div class="contacts__item">
+              <div class="contacts__icon-container">
+                <img
+                  class="contacts__icon"
+                  src="./src/images/phone-icon.svg"
+                  alt="иконка телефона"
+                />
+              </div>
+              <p class="contacts__info">+7 777 777-77-77</p>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__icon-container">
+                <img
+                  class="contacts__icon"
+                  src="./src/images/e-mail-icon.svg"
+                  alt="иконка конверта"
+                />
+              </div>
+              <p class="contacts__info">user@gmail.com</p>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__icon-container">
+                <img
+                  class="contacts__icon"
+                  src="./src/images/location-icon.svg"
+                  alt="иконка метки-локации"
+                />
+              </div>
+              <p class="contacts__info">г. Москва, пр-т Независимости, 158</p>
+            </div>
+          </div>
+          <form class="form" name="ContactForm">
+            <h3 class="form__title">Узнать подробности?</h3>
+            <p class="form__text">
+              Задача организации, в особенности же сложившаяся структура
+              организации.
+            </p>
+            <div class="form__fields">
+              <input class="form__input" type="text" placeholder="Имя" />
+              <input class="form__input" type="tel" placeholder="Телефон" />
+              <input class="form__input" type="text" placeholder="Сообщение" />
+              <span class="form__error"></span>
+            </div>
+            <p class="form__agreement">
+              Нажимая кнопку «Отправить» вы соглашаетесь с
+              <span class="form__agreement--underlined">
+                Политикой конфиденциальности.
+              </span>
+            </p>
+            <button class="form__button" type="submit"></button>
+          </form>
+          <div class="successful-message">
+            <p class="successful-message__text">
+              Форма отправлена. Мы свяжемся с Вами в ближайшее время!
+            </p>
+          </div>
+        </div>
+      </article>
+      <button class="up-button">
+        <img
+          class="up-button__arrow"
+          src="./src/images/up-arrow.svg"
+          alt="стрелка вверх"
+        />
+      </button>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="logo footer__logo">
+          <img class="logo__image" src="./src/images/logo.svg" alt="логотип" />
+        </div>
+        <nav>
+          <ul class="menu footer__menu">
+            <li class="menu__item">Услуги</li>
+            <li class="menu__item"><a href="#about">О нас</a></li>
+            <li class="menu__item"><a href="#employee">Сотрудники</a></li>
+            <li class="menu__item"><a href="#welcome">Приветствие</a></li>
+            <li class="menu__item"><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="footer__social-icons">
+          <a class="footer__icon-container" href="#" target="_blank">
+            <img
+              class="footer__icon"
+              src="./src/images/instagram-icon.svg"
+              alt="иконка instagram"
+            />
+          </a>
+          <a class="footer__icon-container" href="#" target="_blank">
+            <img
+              class="footer__icon"
+              src="./src/images/telegram-icon.svg"
+              alt="иконка telegram"
+            />
+          </a>
+          <a class="footer__icon-container" href="#" target="_blank">
+            <img
+              class="footer__icon"
+              src="./src/images/whatsapp-icon.svg"
+              alt="иконка whats app"
+            />
+          </a>
+        </div>
+        <div class="burger-button burger-button--footer">
+          <img
+            class="burger-button__icon"
+            src="./src/images/burger-menu.svg"
+            alt="бургер-меню"
+          />
+        </div>
+        <div class="mobile-menu mobile-menu--footer">
+          <div class="burger-close burger-close--footer">
+            <img src="./src/images/cross.svg" alt="крест" />
+          </div>
+          <div class="logo mobile-menu__logo">
+            <img
+              class="logo__image"
+              src="./src/images/logo.svg"
+              alt="логотип"
+            />
+          </div>
+          <nav>
+            <ul class="burger-menu">
+              <li class="burger-menu__item">Услуги</li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#about">О нас</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#employee">Сотрудники</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#welcome">Приветствие</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile-menu__social-icons">
+            <a class="mobile-menu__icon-container" href="#" target="_blank">
+              <img
+                class="mobile-menu__icon"
+                src="./src/images/instagram-icon.svg"
+                alt="иконка instagram"
+              />
+            </a>
+            <a class="mobile-menu__icon-container" href="#" target="_blank">
+              <img
+                class="mobile-menu__icon"
+                src="./src/images/telegram-icon.svg"
+                alt="иконка telegram"
+              />
+            </a>
+            <a class="mobile-menu__icon-container" href="#" target="_blank">
+              <img
+                class="mobile-menu__icon"
+                src="./src/images/whatsapp-icon.svg"
+                alt="иконка whats app"
+              />
+            </a>
+          </div>
+          <button class="mobile-menu__button">Оставить заявку</button>
+        </div>
+      </div>
+      <div class="footer__agreements">
+        <a class="footer__agreements-item" href="#" target="_blank">
+          Пользовательское соглашение
+        </a>
+        <a class="footer__agreements-item" href="#" target="_blank">
+          Политика конфиденциальности
+        </a>
+      </div>
+      <div class="footer__rights-block">
+        <p class="footer__rights">
+          © 2025 Название компании. Все права защищены.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="./src/app/main.js"></script>
+  </body>
+</html>

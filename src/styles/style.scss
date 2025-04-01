@@ -1,0 +1,748 @@
+@use "./vars";
+@use "./templates";
+@use "./header";
+@use "./footer";
+
+@include templates.main-style;
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto 30px;
+  @media (max-width: vars.$tablet-lg) {
+    margin: 0 auto 14px;
+  }
+  @media (max-width: vars.$mobile) {
+    margin: 0 auto 40px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    padding: 20px auto;
+    border-radius: 50px;
+    @media (max-width: vars.$desktop-md) {
+      height: 220px;
+    }
+    @media (max-width: vars.$tablet) {
+      height: 190px;
+    }
+    @media (max-width: vars.$mobile) {
+      height: 131px;
+    }
+    &--top-left {
+      border-bottom: 1px solid vars.$border-color;
+      border-right: 1px solid vars.$border-color;
+      background: linear-gradient(
+        134deg,
+        vars.$accent-first 0%,
+        vars.$accent-second 100%
+      );
+    }
+    &--top-right {
+      border-bottom: 1px solid vars.$border-color;
+      border-left: 1px solid vars.$border-color;
+      background: linear-gradient(
+        225deg,
+        vars.$accent-first 0%,
+        vars.$accent-second 100%
+      );
+    }
+    &--bottom-left {
+      border-right: 1px solid vars.$border-color;
+      border-top: 1px solid vars.$border-color;
+      background: linear-gradient(
+        46deg,
+        vars.$accent-first 0%,
+        vars.$accent-second 100%
+      );
+    }
+    &--bottom-right {
+      border-left: 1px solid vars.$border-color;
+      border-top: 1px solid vars.$border-color;
+      background: linear-gradient(
+        132deg,
+        vars.$accent-second 0%,
+        vars.$accent-first 100%
+      );
+    }
+  }
+  &__content {
+    width: auto;
+    height: 200px;
+    @media (max-width: vars.$desktop-md) {
+      height: 167px;
+    }
+    @media (max-width: vars.$tablet) {
+      height: 149px;
+    }
+    @media (max-width: vars.$mobile) {
+      height: 91px;
+    }
+  }
+}
+
+.slogan {
+  @include templates.bold-text-style;
+  font-size: 54px;
+  text-transform: uppercase;
+  text-align: center;
+  @media (max-width: vars.$mobile-sm) {
+    font-size: 50px;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    font-size: 27px;
+  }
+}
+
+.about {
+  margin: 100px auto;
+  padding: 50px 0;
+  @media (max-width: vars.$desktop-md) {
+    margin: 100px auto;
+    padding: 30px 0;
+  }
+  @media (max-width: vars.$tablet) {
+    margin: 65px auto;
+    padding: 25px 0;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    margin: 60px auto;
+    padding: 20px 0;
+  }
+  &__subtitle {
+    @include templates.article-headline-style;
+  }
+  &__title {
+    margin: 30px auto 50px;
+    @include templates.article-title-style;
+    @media (max-width: vars.$tablet) {
+      margin: 33px auto 40px;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      margin-top: 30px;
+    }
+  }
+  &__info {
+    max-width: 701px;
+    margin: 50px auto 80px;
+    @include templates.basic-text-style;
+    line-height: 125%;
+    text-align: justify;
+    @media (max-width: vars.$desktop-md) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: vars.$tablet) {
+      max-width: 640px;
+      margin: 40px auto 50px;
+      font-size: 18px;
+      line-height: 139%;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+}
+
+.achievement {
+  display: flex;
+  justify-content: center;
+  gap: 106px;
+  @media (max-width: vars.$desktop-md) {
+    justify-content: space-between;
+    gap: 0;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    justify-content: center;
+    gap: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include templates.medium-text-style;
+    font-size: 100px;
+    text-transform: uppercase;
+    background: vars.$gradient-bright;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 65px;
+    }
+    @media (max-width: vars.$mobile) {
+      font-size: 35px;
+    }
+  }
+  &__subtitle {
+    @include templates.light-text-style;
+    font-size: 20px;
+    line-height: 125%;
+    background: vars.$gradient-bright;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 14px;
+      line-height: 179%;
+    }
+    @media (max-width: vars.$mobile) {
+      font-size: 11px;
+      line-height: 91%;
+    }
+  }
+}
+
+.team {
+  margin: 100px auto;
+  padding: 50px 0;
+  @include templates.animation-params;
+  @media (max-width: vars.$desktop-md) {
+    margin: 100px auto;
+    padding: 30px 0;
+  }
+  @media (max-width: vars.$tablet) {
+    margin: 65px auto;
+    padding: 26px 0;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    margin: 60px auto;
+    padding: 20px 0;
+  }
+  &__subtitle {
+    @include templates.article-headline-style;
+  }
+  &__title {
+    margin: 30px auto 70px;
+    @include templates.article-title-style;
+    @media (max-width: vars.$tablet) {
+      margin: 33px auto 85px;
+    }
+    @media (max-width: vars.$mobile) {
+      margin: 30px auto 50px;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px 42px;
+    @media (max-width: vars.$desktop-md) {
+      gap: 50px 25px;
+    }
+    @media (max-width: vars.$tablet) {
+      gap: 50px 14px;
+    }
+    @media (max-width: vars.$mobile) {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: 30px;
+      overflow: auto;
+    }
+  }
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 219px;
+  @media (max-width: vars.$tablet) {
+    width: 149px;
+  }
+  @media (max-width: vars.$mobile) {
+    width: 118px;
+  }
+  &__img-container {
+    width: 169px;
+    height: 169px;
+    @include templates.img-container-style;
+    @media (max-width: vars.$tablet) {
+      width: 118px;
+      height: 118px;
+    }
+  }
+  &__image {
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+    z-index: 1;
+    &--small {
+      align-self: flex-end;
+      width: 90%;
+      height: 90%;
+    }
+    &--big {
+      width: 110%;
+      height: 110%;
+    }
+  }
+  &__name {
+    margin: 34px auto 17px;
+    @include templates.bold-text-style;
+    font-size: 20px;
+    @media (max-width: vars.$tablet) {
+      margin: 20px auto 15px;
+      font-size: 18px;
+    }
+    @media (max-width: vars.$mobile) {
+      margin: 10px auto 14px;
+      font-size: 14px;
+    }
+  }
+  &__info {
+    @include templates.light-text-style;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: vars.$text-color;
+    max-width: 219px;
+    @media (max-width: vars.$tablet) {
+      font-size: 11px;
+    }
+    @media (max-width: vars.$mobile) {
+      max-width: 112px;
+      font-size: 10px;
+    }
+  }
+}
+
+.founder-block {
+  margin: 100px auto 75px;
+  padding: 50px 0;
+  @include templates.animation-params;
+  @media (max-width: vars.$desktop-md) {
+    margin-top: 100px;
+    padding-top: 30px;
+  }
+  @media (max-width: vars.$tablet) {
+    margin: 65px auto;
+    padding-top: 26px;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    margin: 60px auto 84px;
+    padding: 20px 0;
+  }
+  &__subtitle {
+    @include templates.article-headline-style;
+  }
+  &__title {
+    margin: 30px auto 11px;
+    @include templates.article-title-style;
+    @media (max-width: vars.$tablet) {
+      margin: 32px auto 34px;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      margin: 30px auto 40px;
+    }
+  }
+  &__quote {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 9px;
+    margin-bottom: 46px;
+    @include templates.basic-text-style;
+    line-height: 125%;
+    text-align: justify;
+    @media (max-width: vars.$desktop-md) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: vars.$tablet) {
+      margin-bottom: 27px;
+      font-size: 16px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__quote-icon {
+    width: 95px;
+    height: 80px;
+    @media (max-width: vars.$tablet) {
+      width: 76px;
+      height: 64px;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      width: 45px;
+      height: 38px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 61px;
+    @media (max-width: vars.$desktop) {
+      gap: 21px;
+    }
+    @media (max-width: vars.$tablet) {
+      gap: 10px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 30px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 87px;
+    max-width: 490px;
+    padding-top: 36px;
+    @media (max-width: vars.$desktop) {
+      gap: 47px;
+      max-width: 445px;
+    }
+    @media (max-width: vars.$desktop-md) {
+      max-width: 490px;
+      padding-top: 31px;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      gap: 30px;
+      max-width: 345px;
+      padding-top: 14px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      max-width: 100%;
+      padding-top: 0;
+    }
+  }
+  &__text {
+    @include templates.basic-text-style;
+    line-height: 125%;
+    text-align: justify;
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 16px;
+    }
+  }
+  &__position {
+    @include templates.light-text-style;
+    font-size: 20px;
+    line-height: 125%;
+    font-style: italic;
+    text-align: right;
+    color: vars.$text-color;
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 16px;
+      line-height: 156%;
+    }
+  }
+  &__img-block {
+    position: relative;
+    width: 414px;
+    height: 444px;
+    border-radius: 0 50px;
+    background-color: vars.$text-color;
+    @media (max-width: vars.$desktop) {
+      width: 358px;
+      height: 384px;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      width: 265px;
+      height: 285px;
+    }
+    @media (max-width: vars.$mobile) {
+      width: 295px;
+      height: 317px;
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 34px;
+    right: 34px;
+    border-radius: 0 50px;
+    width: 414px;
+    height: 444px;
+    @media (max-width: vars.$desktop) {
+      top: 29px;
+      right: 29px;
+      width: 358px;
+      height: 384px;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      top: 20px;
+      right: 20px;
+      width: 265px;
+      height: 285px;
+    }
+    @media (max-width: vars.$mobile) {
+      top: 23px;
+      right: 23px;
+      width: 295px;
+      height: 317px;
+    }
+  }
+}
+
+.connection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 109px auto 16px;
+  padding: 50px 0;
+  @include templates.animation-params;
+  @media (max-width: vars.$tablet-lg) {
+    margin: 62px auto 30px;
+    padding: 30px 0;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    gap: 30px;
+    margin: 62px auto 73px;
+    padding: 20px 0;
+  }
+  &__subtitle {
+    @include templates.article-headline-style;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    @media (max-width: vars.$desktop-md) {
+      gap: 56px;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      gap: 0;
+    }
+    @media (max-width: vars.$mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 39px 20px;
+  border-left: 2px solid vars.$subtitle-color;
+  height: max-content;
+  @media (max-width: vars.$tablet) {
+    max-width: 275px;
+    padding: 18px 20px;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    max-width: 100%;
+    padding: 0 0 0 9px;
+    gap: 15px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: vars.$tablet) {
+      gap: 10px;
+    }
+  }
+  &__icon-container {
+    width: 36px;
+    height: 36px;
+    @media (max-width: vars.$tablet) {
+      width: 34px;
+      height: 34px;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__info {
+    @include templates.basic-text-style;
+    @media (max-width: vars.$tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: vars.$mobile) {
+      letter-spacing: -0.02em;
+    }
+  }
+}
+
+.form {
+  width: 52%;
+  padding: 40px 65px;
+  background: vars.$gradient-bright;
+  border-radius: 80px;
+  @media (max-width: vars.$tablet-lg) {
+    width: 365px;
+    padding: 40px 35px;
+  }
+  @media (max-width: vars.$tablet-sm) {
+    width: 320px;
+    padding: 40px 37px;
+  }
+  &__title {
+    @include templates.bold-text-style;
+    font-size: 30px;
+    color: vars.$light-color;
+    text-wrap: nowrap;
+    @media (max-width: vars.$desktop-md) {
+      text-align: center;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 25px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    margin: 20px auto 30px;
+    @include templates.light-text-style;
+    font-size: 18px;
+    line-height: 111%;
+    text-align: justify;
+    color: vars.$light-color;
+    @media (max-width: vars.$tablet-lg) {
+      margin: 15px auto 20px;
+      font-size: 14px;
+      line-height: 143%;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      margin: 20px auto 20px;
+      font-size: 12px;
+      line-height: 167%;
+    }
+  }
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @media (max-width: vars.$tablet-lg) {
+      gap: 7px;
+    }
+  }
+  &__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 32px;
+    @include templates.basic-text-style;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid vars.$light-color;
+    background: vars.$light-color;
+    outline: none;
+    @media (max-width: vars.$tablet-lg) {
+      padding: 0 32px;
+      height: 48px;
+      font-size: 14px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      padding: 0 20px;
+    }
+    &::placeholder {
+      color: vars.$subtitle-color;
+    }
+  }
+  &__error {
+    @include templates.bold-text-style;
+    font-size: 16px;
+    color: vars.$light-color;
+    @media (max-width: vars.$tablet) {
+      font-size: 14px;
+    }
+    @media (max-width: vars.$mobile) {
+      font-size: 12px;
+    }
+  }
+  &__agreement {
+    margin: 20px auto 30px;
+    @include templates.light-text-style;
+    font-size: 15px;
+    line-height: 133%;
+    text-align: justify;
+    color: vars.$light-color;
+    @media (max-width: vars.$tablet-lg) {
+      margin: 15px auto 20px;
+      font-size: 12px;
+      line-height: 167%;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      margin: 16px auto 18px;
+      line-height: 125%;
+    }
+    &--underlined {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    margin: auto;
+    font-family: vars.$font-family;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    background-color: vars.$light-color;
+    border-radius: 50px;
+    cursor: pointer;
+    &::before {
+      content: "Отправить";
+      position: absolute;
+      background: vars.$gradient-bright;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    &:hover {
+      background: vars.$gradient;
+      border: 2px solid vars.$light-color;
+      &::before {
+        background: vars.$light-color;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+    @media (max-width: vars.$tablet-lg) {
+      width: 229px;
+      height: 48px;
+      font-size: 16px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      width: 211px;
+      height: 45px;
+    }
+  }
+}
+
+.successful-message {
+  display: none;
+  width: 52%;
+  @media (max-width: vars.$tablet-lg) {
+    width: 365px;
+  }
+  @media (max-width: vars.$tablet-sm) {
+    width: 320px;
+  }
+  &__text {
+    @include templates.article-title-style;
+    & {
+      text-transform: none;
+    }
+  }
+}
+
+@include templates.up-btn-style;

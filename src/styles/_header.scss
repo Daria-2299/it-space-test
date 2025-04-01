@@ -1,0 +1,165 @@
+@use "./vars";
+@use "./templates";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 20px auto 39px;
+  @media (max-width: vars.$desktop-md) {
+    width: 80%;
+  }
+  @media (max-width: vars.$tablet-lg) {
+    width: 67%;
+    margin: 20px auto 31px;
+  }
+  @media (max-width: vars.$mobile) {
+    margin: 9px auto 40px;
+  }
+  &__button {
+    @include templates.gradient-btn-style;
+    width: 174px;
+    height: 53px;
+    padding: 17px 20px;
+    @media (max-width: vars.$tablet-lg) {
+      width: 139px;
+      height: 48px;
+      font-size: 12px;
+    }
+    @media (max-width: vars.$tablet-sm) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  width: 156px;
+  height: 48px;
+  @media (max-width: vars.$tablet-lg) {
+    width: 99px;
+    height: 31px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 49px;
+  list-style-type: none;
+  @media (max-width: vars.$desktop) {
+    gap: 40px;
+  }
+  @media (max-width: vars.$tablet-lg) {
+    gap: 20px;
+  }
+  @media (max-width: vars.$mobile) {
+    display: none;
+  }
+  &__item {
+    @include templates.medium-text-style;
+    color: vars.$text-color;
+    text-wrap: nowrap;
+    cursor: pointer;
+    @media (max-width: vars.$tablet-lg) {
+      font-size: 12px;
+    }
+    @media (max-width: vars.$mobile-sm) {
+      font-size: 20px;
+      color: vars.$light-color;
+    }
+    &:hover {
+      color: vars.$accent-first;
+      transform: scale(1.3);
+    }
+  }
+}
+
+.burger-button {
+  display: none;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background: vars.$bg-burger-menu;
+  @media (max-width: vars.$mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  padding: 20px 74px 40px 80px;
+  background: vars.$bg-footer;
+  z-index: 20;
+  &--footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__logo {
+    width: 114px;
+    height: 45px;
+  }
+  &__social-icons {
+    display: flex;
+    gap: 25px;
+  }
+  &__icon-container {
+    width: 29px;
+    height: 29px;
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__button {
+    width: 226px;
+    height: 59px;
+    margin: auto;
+    padding: 20px 46px;
+    @include templates.gradient-btn-style;
+    font-weight: 600;
+  }
+}
+
+.burger-close {
+  position: absolute;
+  top: 28px;
+  right: 74px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style-type: none;
+  &__item {
+    @include templates.medium-text-style;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

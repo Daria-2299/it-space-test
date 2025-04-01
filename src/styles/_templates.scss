@@ -1,0 +1,199 @@
+@use "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin light-text-style {
+  font-family: vars.$font-family;
+  font-weight: 300;
+}
+
+@mixin basic-text-style {
+  font-family: vars.$font-family;
+  font-size: 20px;
+  font-weight: 400;
+  color: vars.$text-color;
+}
+
+@mixin medium-text-style {
+  font-family: vars.$font-family;
+  font-weight: 500;
+  font-size: 16px;
+  color: vars.$light-color;
+}
+
+@mixin bold-text-style {
+  font-family: vars.$font-family;
+  font-weight: 700;
+  color: vars.$text-color;
+}
+
+@mixin main-style {
+  .main {
+    width: 70%;
+    margin: auto;
+    @media (max-width: vars.$desktop-md) {
+      width: 80%;
+    }
+    @media (max-width: vars.$tablet-lg) {
+      width: 67%;
+    }
+  }
+}
+
+@mixin article-headline-style {
+  display: block;
+  width: fit-content;
+  height: 33px;
+  margin: auto;
+  padding: 4px 20px;
+  @include bold-text-style();
+  font-size: 20px;
+  text-transform: uppercase;
+  color: vars.$subtitle-color;
+  border: 1px solid vars.$subtitle-color;
+  border-radius: 230px;
+  @media (max-width: vars.$tablet) {
+    height: 30px;
+    font-size: 18px;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    height: 25px;
+    font-size: 14px;
+  }
+}
+
+@mixin article-title-style {
+  @include bold-text-style();
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  @media (max-width: vars.$tablet) {
+    font-size: 38px;
+  }
+  @media (max-width: vars.$mobile-sm) {
+    font-size: 20px;
+  }
+}
+
+@mixin section-headline-style {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 45px;
+  padding: 0 46px;
+  @include medium-text-style();
+  color: vars.$text-color;
+  text-align: justify;
+  border: 1px solid vars.$text-color;
+  border-radius: 230px;
+  @media (max-width: vars.$tablet) {
+    height: 33px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
+
+@mixin up-btn-style {
+  .up-button {
+    position: fixed;
+    right: 20px;
+    bottom: 66px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 100%;
+    background-color: vars.$text-color;
+    cursor: pointer;
+    &:hover {
+      background: vars.$gradient-bright;
+    }
+    @media (max-width: vars.$desktop-md) {
+      right: 10px;
+      bottom: 69px;
+    }
+    @media (max-width: vars.$tablet) {
+      right: 20px;
+      bottom: 54px;
+      width: 50px;
+      height: 50px;
+    }
+    @media (max-width: vars.$mobile) {
+      right: 10px;
+      bottom: 85px;
+    }
+    &__arrow {
+      width: 34px;
+      height: 18px;
+      @media (max-width: vars.$tablet) {
+        width: 24px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+@mixin gradient-btn-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include medium-text-style();
+  text-wrap: nowrap;
+  background: vars.$gradient-bright;
+  border: none;
+  border-radius: 230px;
+  cursor: pointer;
+  &:hover {
+    background: vars.$accent-first;
+  }
+}
+
+@mixin img-container-style {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  background: vars.$gradient-bright;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 100%;
+    background: vars.$light-color;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 100%;
+    background: vars.$gradient;
+  }
+}
+
+@mixin animation-params {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
