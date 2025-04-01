@@ -48,7 +48,7 @@ function hideErrorMessage() {
   errorFormMsg.style.display = "none";
 }
 
-let observer = new IntersectionObserver(appearance, { threshold: [0.6] });
+let observer = new IntersectionObserver(appearance, { threshold: [0.1] });
 
 const animationClasses = [".team", ".founder-block", ".connection"];
 
